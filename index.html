@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin:  0;
+        }
+        body {
+            background-color: black;
+            overflow-y: hidden; /* Hide vertical scrollbar */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+        canvas{
+            z-index: -1;
+            animation: vibrate;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+
+        .score{
+            z-index: 1;
+            align-content: center;
+            display: flex;
+            position: absolute;
+            background-color: black;
+            padding: 25px;
+            border-radius: 0 0 20px 0;
+            font-family: 'Definitva';
+            font-size: 20px;
+            color: white;
+            width: 300px;
+
+        }
+        .thumb{
+            width: 50px;
+            height: 50px;
+        }
+        .thumb img{
+            width: 50px;
+            height: 50px;
+        }
+
+        @keyframes vibrate{
+            0%{
+                transform: translateY(5px) scale(3.5,3.5); 
+            }
+            100%{
+                transform: translateY(0px) scale(1,1);
+                /* transform: translateX(0px);  */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <canvas width="3000" height="1500"></canvas>
+    
+    <!--Game Scripts-->
+    <script src="js/libraries/ECSY.min.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/GameSettings.js"></script>
+    <script src="js/Primitives.js"></script>
+    <script src="js/Components.js"></script>
+    <script src="js/Input2.js"></script>
+
+    <!--Toolkits-->
+
+    <script src="js/ToolKits/TreeFunctions.js"></script>
+    <script src="js/ToolKits/Vector2D.js"></script>
+    <script src="js/ToolKits/CollisionDetector.js"></script>
+    <script src="js/ToolKits/EventManager.js"></script>
+
+    <!--Systems -->
+
+    <script src="js/Systems/SnakeSystem.js"></script>
+    <script src="js/Systems/InteractionSystem.js"></script>
+    <script src="js/Systems/ForceSystem.js"></script>
+    <script src="js/Systems/KineticSystem.js"></script>
+    <script src="js/Systems/RenderableSystems.js"></script>
+    <script src="js/Systems/PortalSystem.js"></script>
+    <script src="js/Systems/ParticleSystem.js"></script>
+
+    <!--Entity Builders-->
+
+    <script src="js/EntityBuilders/Snake.js"></script>
+    <script src="js/EntityBuilders/Star.js"></script>
+    <script src="js/EntityBuilders/Sacacanas.js"></script>
+    <script src="js/EntityBuilders/Sun.js"></script>
+    <script src="js/EntityBuilders/Portals.js"></script>
+
+    <!-- Preparation and execution-->
+
+    <script src="js/init/setUp.js"></script>
+    <script src="js/init/prepareEvents.js"></script>
+    <script src="js/GameLoop.js"></script>
+</body>
+</html>
