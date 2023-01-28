@@ -57,7 +57,7 @@ class ForceSystem extends System {
     }
 
     // Optimization
-
+    /*
     linearSort(){
         this.queries.passives.results.sort( (a, b) => {
             let positionA = a.getComponent(Position).x - a.getComponent(Shape).primitive.radius;
@@ -80,12 +80,13 @@ class ForceSystem extends System {
             return true;
         }
         return false;
-}
 
+    }
+    */
 }
 
 ForceSystem.queries = {
 
-    actives  : { components : [Forcefield, Position] },        // Force exersors  ( repulsion | attraction)
-    passives : { components : [HasPhysics, Position, Velocity ]} // Force receivers ( repulsion | attraction)
+    actives  : { components : [Forcefield, Position] },          // Force exerciser
+    passives : { components : [HasPhysics, Position, Velocity ]} // Force receivers
 }

@@ -50,7 +50,7 @@ function setUp(){
     sun = Sun();
 
 
-    for(let i = 0; i < 20; i++){
+    for(let i = 0; i < 50; i++){
         GameStar({ x : Math.random() * canvasWidth, y : Math.random() * canvasHeight}, 12 + (Math.random() * 20));
     }
 

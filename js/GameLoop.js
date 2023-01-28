@@ -1,7 +1,16 @@
 
 /*-- GameLoop --*/
 
+var pause = false;
+
 function run() {
+
+    requestAnimationFrame(run);
+
+    if(pause){
+        return;
+    }
+
     c.fillStyle = 'rgba(6,14,22,0.4)';
     //c.fillStyle = 'rgba(15,0,5,0.3)';
     c.fillRect(0,0, canvasWidth,canvasHeight);
@@ -14,7 +23,6 @@ function run() {
     Input.reset();
 
     lastTime = time;
-    requestAnimationFrame(run);
 }
 
 var lastTime = performance.now();
@@ -25,3 +33,7 @@ c.fillRect(0,0, canvasWidth,canvasHeight);
 
 
 run();
+
+window.addEventListener('dblclick', () => {
+    pause =  !pause;
+});
