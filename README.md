@@ -1,5 +1,6 @@
 # SnakeSpace - Under development
 
-A retro-style game, full of multiplayer gameplay, and hundreds of stars
+Inspired on the classic <i>Snake</i> game, but with a local-multiplayer essence.
 
 
+![Alt text](https://github.com/WebAxol/SnakeSpace/blob/main/img/gameplay1.png)
